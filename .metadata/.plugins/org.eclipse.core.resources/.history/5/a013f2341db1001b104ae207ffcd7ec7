@@ -1,0 +1,30 @@
+package restAssuredAssignments;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import java.time.format.DateTimeFormatter;  
+import java.time.LocalDateTime;
+
+public class Assignment6 {
+	Response response;
+	String url;
+	java.util.Date date=new java.util.Date();  
+	
+	/*@Given("Assignment6_Specific Date exchange rates URI")
+	public void assignment6_specific_Date_exchange_rates_URI() {
+		 url= "https://api.ratesapi.io/api/2022-01-01"; 
+	}
+
+	@When("Assignment6_the API is available with future date url")
+	public void assignment6_the_API_is_available_with_future_date_url() {
+	  response= RestAssured.get(url);
+	}*/
+
+	@Then("Assignment6_assert the response for the prsence of current date")
+	public void assignment6_assert_the_response_for_the_prsence_of_current_date() {
+	System.out.println(date);	
+	}
+}
